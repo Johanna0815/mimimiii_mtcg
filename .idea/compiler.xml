@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MTCG-main" />
         <module name="MTCG" />
+        <module name="mimimiii08012022" />
       </profile>
     </annotationProcessing>
   </component>
