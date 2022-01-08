@@ -1,10 +1,11 @@
-/* Messages */
-DROP TABLE IF EXISTS messages CASCADE;
-CREATE TABLE messages
+/* http_news */
+DROP TABLE IF EXISTS http_news CASCADE;
+CREATE TABLE http_news
 (
     id      SERIAL PRIMARY KEY,
-    message VARCHAR(255) NULL
+    http_news VARCHAR(255) NULL
 );
+
 
 /* Users */
 DROP TABLE IF EXISTS users CASCADE;
@@ -25,17 +26,16 @@ CREATE TABLE users
 
 
 /* Packages */
-
 DROP TABLE IF EXISTS packages CASCADE;
 CREATE TABLE packages
 (
     id    SERIAL PRIMARY KEY,
-    name  VARCHAR(255)  NOT NULL DEFAULT 'Card Package',
+    name  VARCHAR(255)  NOT NULL DEFAULT 'Card_Package',
     price DECIMAL(8, 4) NOT NULL DEFAULT 5
 );
 
-/* Cards */
 
+/* Cards */
 DROP TABLE IF EXISTS cards CASCADE;
 CREATE TABLE cards
 (
@@ -52,9 +52,10 @@ CREATE TABLE cards
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
+
 /* Battle */
-DROP TABLE IF EXISTS battles CASCADE;
-CREATE TABLE battles
+DROP TABLE IF EXISTS battle CASCADE;
+CREATE TABLE battle
 (
     id       SERIAL PRIMARY KEY,
     player_a INT,
@@ -74,11 +75,12 @@ CREATE TABLE battle_rounds
     card_a      INT NOT NULL,
     card_b      INT NOT NULL,
     winner_card INT,
-    CONSTRAINT fk_battle FOREIGN KEY (battle_id) REFERENCES battles (id),
+    CONSTRAINT fk_battle FOREIGN KEY (battle_id) REFERENCES battle (id),
     CONSTRAINT fk_card_a FOREIGN KEY (card_a) REFERENCES cards (id),
     CONSTRAINT fk_card_b FOREIGN KEY (card_b) REFERENCES cards (id),
     CONSTRAINT fk_winner_card FOREIGN KEY (winner_card) REFERENCES cards (id)
 );
+
 
 /* Trades */
 DROP TABLE IF EXISTS trades CASCADE;
