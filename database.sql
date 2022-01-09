@@ -16,11 +16,14 @@ CREATE TABLE users
     status        VARCHAR(255),
     password      VARCHAR(255) NOT NULL,
     token         VARCHAR(255) NULL,
+    name        text,
+    bio         text,
+    image       text,
     coins         INT          NOT NULL DEFAULT 20,
-    total_battles INT                   DEFAULT 0,
-    won_battles   INT                   DEFAULT 0,
+    games       INT                   DEFAULT 0,
+    won_Games   INT                   DEFAULT 0,
     lost_battles  INT                   DEFAULT 0,
-    elo           INT                   DEFAULT 1000,
+    elo           INT                   DEFAULT 100,
     UNIQUE (username)
 );
 
