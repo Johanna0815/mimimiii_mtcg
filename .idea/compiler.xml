@@ -13,4 +13,9 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mimimiii08012022" options="--add-exports java.base/jdk.internal.reflect=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

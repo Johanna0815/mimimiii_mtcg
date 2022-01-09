@@ -1,5 +1,7 @@
-package com.mimimiii.mtcg;
+package com.mimimiii.dbutils;
 
+
+import com.mimimiii.dbutils.battle.Battle;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

@@ -41,7 +41,7 @@ CREATE TABLE cards
 (
     id           SERIAL PRIMARY KEY,
     name         VARCHAR(255)  NOT NULL,
-    damage       DECIMAL(6, 2) NOT NULL,
+    damage       DECIMAL(8, 4) NOT NULL,
     element_type VARCHAR(255)  NOT NULL,
     card_type    VARCHAR(255)  NOT NULL,
     package_id   INT,
