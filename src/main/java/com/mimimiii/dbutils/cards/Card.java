@@ -23,7 +23,7 @@ public class Card {
     private ElementType elementType;
 
 
-    public Card(String id, String name, float damage) {
+    public Card(String id, String name, float damage, CardType cardType, ElementTypes elementTypes) {
         this.id = id;
         this.name = name;
         this.damage = damage;

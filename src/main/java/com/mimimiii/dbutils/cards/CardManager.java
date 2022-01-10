@@ -1,10 +1,14 @@
 package com.mimimiii.dbutils.cards;
 
+
 // BUg mit de link ---maven
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.mimimiii.dbutils.user.User;
+import com.mimimiii.dbutils.battle.Deck;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +17,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 
 public class CardManager {
 
@@ -158,13 +163,13 @@ public class CardManager {
         return true;
     }
 
-    public ElementType createElementType (String element){
+    public ElementTypes createElementTypes (String element){
         if (element.toLowerCase().contains("water")){
-            return ElementType.water;
+            return ElementTypes.water;
         } else if (element.toLowerCase().contains("fire")){
-            return ElementType.fire;
+            return ElementTypes.fire;
         } else {
-            return ElementType.normal;
+            return ElementTypes.normal;
         }
     }
 
@@ -173,7 +178,7 @@ public class CardManager {
             return CardType.Spell;
         } else if (name.toLowerCase().contains("dragon")){
             return CardType.Dragon;
-        } else if (name.toLowerCase().contains("fireelf")){
+        } else if (name.toLowerCase().contains("fireelves")){
             return CardType.FireElves;
         } else if (name.toLowerCase().contains("goblin")){
             return CardType.Goblin;
@@ -200,7 +205,7 @@ public class CardManager {
             List<Card> cards = new ArrayList<>();
             while (rs.next()) {
                 String name = rs.getString(2);
-                cards.add(new Card(rs.getString(1), name, rs.getFloat(3),createCardType(name),createElementType(name)));
+                cards.add(new Card(rs.getString(1), name, rs.getFloat(3),createCardType(name),createElementTypes(name)));
             }
             deck = new Deck(cards);
             rs.close();
