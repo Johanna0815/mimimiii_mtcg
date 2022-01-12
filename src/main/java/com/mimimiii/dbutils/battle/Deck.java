@@ -12,6 +12,8 @@ public class Deck {
     public Deck (List<Card> deck) {
         if (deck != null) {
             for (int i = 0; deck.size() > i && i < 4; i++) {
+
+
                 this.cards.add(deck.get(i));
             }
         }
@@ -29,6 +31,7 @@ public class Deck {
         }
     }
 
+        //vielleciht nur ordnen ? .__ CURL !
     public Card getRandomCard(){
         if (cards != null && cards.size() > 0){
             return cards.get((int)(Math.random() * cards.size()));

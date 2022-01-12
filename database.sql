@@ -29,10 +29,12 @@ CREATE TABLE users
 
 
 /* Packages */
+/* id 1 - 5 stimmt noch nicht // defekt */
 DROP TABLE IF EXISTS packages CASCADE;
 CREATE TABLE packages
 (
     id    SERIAL PRIMARY KEY,
+
     name  VARCHAR(255)  NOT NULL DEFAULT 'Card_Package',
     price DECIMAL(8, 4) NOT NULL DEFAULT 5
 );

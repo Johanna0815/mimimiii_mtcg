@@ -1,13 +1,13 @@
 package com.mimimiii.dbutils.user;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-//OUT -replace
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mimimiii.dbutils.common.objects;
+import com.mimimiii.dbutils.database.DatabaseService;
+
 
 public class User {
 
@@ -21,7 +21,7 @@ private final Integer coins;
 private int games;
 private int won_Games;
 private int elo;
-// token ?
+// String token ?
 
 
     public User(String username, String name, String password, String bio, String image, Integer coins, int games, int won_Games, int elo) {
@@ -36,7 +36,7 @@ private int elo;
         this.elo = elo;
     }
 
-
+/*
     public String getInfo() {
 
         try {
@@ -45,7 +45,7 @@ private int elo;
             map.put("Bio:",bio);
             map.put("Image:", image);
             map.put("Coins", coins.toString());
-            return new ObjectMapper().writeValueAsString(map);
+      //  return "";  //  return new ObjectMapper().writeValueAsString(map);
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();
@@ -118,7 +118,7 @@ private int elo;
         }
         return false;
     }
-    public boolean setUserInfo(String name, String bio, String image){
+    public boolean setUserInfo(String name, String bio, String image, String username){
         try {
             Connection conn = DatabaseService.getInstance().getConnection();
             PreparedStatement ps = conn.prepareStatement("UPDATE users SET name = ?, bio = ?, image = ? WHERE username = ?;");
@@ -139,6 +139,8 @@ private int elo;
     }
 
 
+    public String getUsername() {
+    }
 
-
+ */
 }

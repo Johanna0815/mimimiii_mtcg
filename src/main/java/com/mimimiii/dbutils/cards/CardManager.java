@@ -4,11 +4,13 @@ package com.mimimiii.dbutils.cards;
 // BUg mit de link ---maven
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.mimimiii.dbutils.database.DatabaseService;
 import com.mimimiii.dbutils.user.User;
 import com.mimimiii.dbutils.battle.Deck;
+
+
+// import java.sql.DriverManager;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +22,7 @@ import java.util.List;
 
 
 public class CardManager {
-
+/*
     private static CardManager single_instance = null;
 
     public static CardManager getInstance()
@@ -56,8 +58,8 @@ public class CardManager {
         }
         try {
             Connection conn = DatabaseService.getInstance().getConnection();
-                                                                                // sql roto __ id eindeutiger ??
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO packages(id, id, id, id, id) VALUES(?,?,?,?,?);");
+                                                                                // sql roto __ id eindeutiger ?? __
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO packages(id_1, id_2, id_3, id_4, id_5) VALUES(?,?,?,?,?);");
             ps.setString(1, cards.get(0).getId());
             ps.setString(2, cards.get(1).getId());
             ps.setString(3, cards.get(2).getId());
@@ -218,7 +220,7 @@ public class CardManager {
 
     public boolean registerCard(String id, String name, float damage) {
         if (!id.isEmpty() && !name.isEmpty()) {
-            ElementType element = createElementType(name);
+            ElementTypes element = createElementTypes(name);
             CardType cardType = createCardType(name);
             if ( element != null && cardType != null){
                 try {
@@ -262,7 +264,7 @@ public class CardManager {
         }
         try {
             Connection conn = DatabaseService.getInstance().getConnection();
-            // Check if user owns Cards
+            // Check if user owns Cards ---sql no checkn.
             List<String> checkTwice = new LinkedList<>();
             for (String cardID: id){
                 if (checkTwice.contains(cardID)){
@@ -283,7 +285,10 @@ public class CardManager {
                     conn.close();
                     return false;
                 }
+
+
             }
+
             // Set all Cards to Stack
             PreparedStatement ps = conn.prepareStatement("UPDATE cards SET collection = 'stack' WHERE owner = ?;");
             ps.setString(1,user.getUsername());
@@ -303,4 +308,8 @@ public class CardManager {
         }
         return true;
     }
+
+ */
+
 }
+
