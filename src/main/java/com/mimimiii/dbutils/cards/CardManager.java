@@ -3,22 +3,8 @@ package com.mimimiii.dbutils.cards;
 
 // BUg mit de link ---maven
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.mimimiii.dbutils.database.DatabaseService;
-import com.mimimiii.dbutils.user.User;
-import com.mimimiii.dbutils.battle.Deck;
-
 
 // import java.sql.DriverManager;
-
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 
 public class CardManager {
