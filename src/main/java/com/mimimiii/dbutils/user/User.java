@@ -1,12 +1,17 @@
 package com.mimimiii.dbutils.user;
 
 
-// soll ein funktionales Interface bleiben!
+// soll ein funktionales Interface bleiben! /// der tatsächliche user
 public interface User {
 
 
-    public static void login(String getUsername, String getPassword) {
-    };
+
+    public String getName();
+
+    public String getPassword();
+
+
+    public boolean setPassword(String password);
 
 
 
