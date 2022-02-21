@@ -8,6 +8,8 @@ package com.mimimiii.dbutils.cards;
 
 
 public class CardManager {
+
+
 /*
     private static CardManager single_instance = null;
 

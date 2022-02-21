@@ -4,12 +4,17 @@ package com.mimimiii.dbutils;
 import com.mimimiii.dbutils.battle.Battle;
 import com.mimimiii.dbutils.database.DatabaseService;
 import com.mimimiii.dbutils.rest_stateTransfer.Server;
+import com.mimimiii.dbutils.user.User;
 import lombok.AllArgsConstructor;
 
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static java.awt.Color.green;
+import static java.awt.Color.red;
 
 
 // http anfrage einlesen könne, http protokoll implementieren. // get und useres... zur user klasse ... // anfrage richtig einlesen.
@@ -17,6 +22,9 @@ import java.sql.Statement;
 public class Main {
 
     public static void main(String[] args) {
+
+       // Color c = new Color(String red, String green,);
+
 
         Server myServer = new Server(10001);
         myServer.start();

@@ -64,7 +64,9 @@ public class Server {
 
             String jsonStr = jsonStrBuilder.toString();
 
-            UserImpl user = .fromJson(jsonStr, UserImpl.class);
+
+     // .fromJson
+            UserImpl user = UserImpl.fromJson(jsonStr, UserImpl.class);
             System.out.println(user.Username + "" + user.Password);
 
 
