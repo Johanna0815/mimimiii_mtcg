@@ -20,20 +20,24 @@ public class Card {
     private CardType cardType;        // enum // BUG -----nimmt er ned als min dtyp List<CardType> cardType;
 
     @Getter
-    private ElementType elementType;
+    private ElementTypes elementTypes;
+
+    public Card() {
+
+    }
 
 
-    public Card(String id, String name, float damage, CardType cardType, ElementTypes elementTypes) {
+    public Card(String id, String name, float damage) {
         this.id = id;
         this.name = name;
         this.damage = damage;
     }
 
-    public Card(String id, String name, float damage,CardType type, ElementType element) {
+    public Card(String id, String name, float damage,CardType type, ElementTypes element) {
         this.id = id;
         this.name = name;
         this.damage = damage;
         cardType = type;
-        elementType = element;
+        elementTypes = element;
     }
 }

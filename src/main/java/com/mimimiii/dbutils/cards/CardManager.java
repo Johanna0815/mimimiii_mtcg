@@ -1,14 +1,25 @@
 package com.mimimiii.dbutils.cards;
 
 
-// BUg mit de link ---maven
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.mimimiii.dbutils.battle.Deck;
+import com.mimimiii.dbutils.database.DatabaseService;
+import com.mimimiii.dbutils.user.User;
 
-
-// import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 
 public class CardManager {
-/*
+
     private static CardManager single_instance = null;
 
     public static CardManager getInstance()
@@ -295,7 +306,7 @@ public class CardManager {
         return true;
     }
 
- */
+
 
 }
 

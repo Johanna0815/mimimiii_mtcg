@@ -7,6 +7,10 @@ CREATE TABLE http_news
 );
 
 
+
+/* login */
+
+
 /* Users */
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users
@@ -15,7 +19,7 @@ CREATE TABLE users
     username      VARCHAR(255) NOT NULL,
     status        VARCHAR(255),
     password      VARCHAR(255) NOT NULL,
-    token         VARCHAR(255) NULL,
+    token         VARCHAR(255) NULL, /* aus pw einen token genierien, mit gültigkeit ;; token gen und wieder ankommt, auf valid proof // zeitlich  */
     name        text,
     bio         text,
     image       text,
