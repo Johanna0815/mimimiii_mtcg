@@ -55,8 +55,9 @@ public class CardManager {
         }
         try {
             Connection conn = DatabaseService.getInstance().getConnection();
-                                                                                // sql roto __ id eindeutiger ?? __
+
             PreparedStatement ps = conn.prepareStatement("INSERT INTO packages(id_1, id_2, id_3, id_4, id_5) VALUES(?,?,?,?,?);");
+            // set int
             ps.setString(1, cards.get(0).getId());
             ps.setString(2, cards.get(1).getId());
             ps.setString(3, cards.get(2).getId());
@@ -255,6 +256,7 @@ public class CardManager {
         }
     }
 
+
     public boolean createDeck(User user, List<String> id){
         if (id.size() != 4){
             return false;
@@ -268,10 +270,12 @@ public class CardManager {
                     conn.close();
                     return false;
                 }
-                checkTwice.add(cardID);
+            /*    checkTwice.add(cardID);
                 if (TradeManager.getInstance().marketplaceContains(cardID)){
                     return false;
                 }
+
+             */
                 PreparedStatement ps = conn.prepareStatement("SELECT COUNT(cardid) FROM cards WHERE cardid = ? AND owner = ?;");
                 ps.setString(1,cardID);
                 ps.setString(2,user.getUsername());
@@ -282,6 +286,9 @@ public class CardManager {
                     conn.close();
                     return false;
                 }
+
+
+
 
 
             }

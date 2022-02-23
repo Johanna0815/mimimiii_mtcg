@@ -42,4 +42,9 @@ public class UserImpl implements User {
 
         return passwordHash.equals(getPassword());
     }
+
+    @Override
+    public boolean buyPackage() {
+        return false;
+    }
 }

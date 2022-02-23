@@ -1,5 +1,5 @@
 package com.mimimiii.dbutils.user;
-
+ /*
 public class Authentification {
 
 
@@ -7,7 +7,10 @@ public class Authentification {
 
     //RegistrierungsUser anlegen mechanismus ! post methode auf user
     //authentification auslagern !!
-    public static login(String getUsername, String getPassword) {
+
+
+   /*
+    public static String login(String getUsername, String getPassword) {
         //static - kein objekt dieser klasse, klassenmehtode+ attribute nicht verändern. ;
 
       //   Liste aller user holen ; List<getUsername>
@@ -26,3 +29,5 @@ public class Authentification {
 
 
 }
+
+    */

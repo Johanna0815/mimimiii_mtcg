@@ -29,7 +29,7 @@ public class Controller {
         // GET /weather
         public Response getBattle() {
             try {
-                List weatherData = this.battleService.getBattle();
+                List battleData = this.battleService.getBattle();
                 // "[ { \"id\": 1, \"battle\": \"Ork\", \"temperature\": 9.0 }, { ... }, { ... } ]"
                 String battleDataJSON = this.getObjectMapper().writeValueAsString(battleData);
 

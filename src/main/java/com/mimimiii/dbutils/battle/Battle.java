@@ -29,9 +29,14 @@ public class Battle {
     // Jackson needs the default constructor
     public Battle() {}
 
+
+    /*
     public Battle(Integer id, String battle, float points) {
         this.id = id;
         this.battle = battle;
         this.battlePoints = points;
     }
+
+
+     */
 }

@@ -5,6 +5,23 @@ import com.mimimiii.dbutils.http_news.HttpStatus;
 
 public class Response {
     private int status;
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     private String message;
     private String contentType;
     private String content;
@@ -16,6 +33,8 @@ public class Response {
         this.content = content;
     }
 
+
+    //Kindsklassen können ansehen. // 1: 1 zurück schicken. standard response // post. put---
     protected String get() {
         return "HTTP/1.1 " + this.status + " " + this.message + "\r\n" +
                 "Content-Type: " + this.contentType + "\r\n" +

@@ -1,9 +1,5 @@
 package com.mimimiii.dbutils.cards;
 
-import lombok.Getter;
-
-import java.lang.annotation.ElementType;
-
 //damage | element type
 public class Card {
 
@@ -19,16 +15,24 @@ public class Card {
         this.cardName = cardName;
     }
 
-    public getCardType(String) {
+    public Card(String string, String name, float aFloat, CardType cardType, ElementTypes elementTypes) {
 
+    }
+
+    public String getCardType(String cardName) {
+return this.cardName;
     }
 
     ;
 
-    public removeCard(String cardName) {
+    public void removeCard(String cardName) {
 
         // this.cardName = cardName;
 
+    }
+
+    public String getId() {
+        return this.id;
     }
 
 
