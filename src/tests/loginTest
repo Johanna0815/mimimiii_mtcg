@@ -1,0 +1,15 @@
+
+package com.mimimiii.mtcg;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+
+// TODO
+      //  prüfen ob sich der User wirklich einem login unterzogen hat
+class LoginTest implements User {
+
+if( username instanceof User) {
+
+
+
+}

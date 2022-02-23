@@ -7,6 +7,33 @@ import java.lang.annotation.ElementType;
 //damage | element type
 public class Card {
 
+    String cardName;
+
+    private String id;
+
+
+    public Card() {
+    }
+
+    public Card(String cardName) {
+        this.cardName = cardName;
+    }
+
+    public getCardType(String) {
+
+    }
+
+    ;
+
+    public removeCard(String cardName) {
+
+        // this.cardName = cardName;
+
+    }
+
+
+
+    /*
     @Getter
     private String id;
 
@@ -40,4 +67,6 @@ public class Card {
         cardType = type;
         elementTypes = element;
     }
+
+     */
 }

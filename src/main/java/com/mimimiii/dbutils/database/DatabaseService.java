@@ -8,6 +8,8 @@ import java.sql.SQLException;
 
 public class DatabaseService {
 
+
+
                                                 // mimimiii_mtcg
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USER = "swe1user";
