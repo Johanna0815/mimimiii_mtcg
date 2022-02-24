@@ -34,7 +34,7 @@ public class Response {
     }
 
 
-    //Kindsklassen können ansehen. // 1: 1 zurück schicken. standard response // post. put---
+    //subclass can see // sends 1:1 back |  standard response
     protected String get() {
         return "HTTP/1.1 " + this.status + " " + this.message + "\r\n" +
                 "Content-Type: " + this.contentType + "\r\n" +

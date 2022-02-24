@@ -10,6 +10,7 @@ import com.mimimiii.dbutils.http_news.HttpStatus;
 import com.mimimiii.dbutils.rest_stateTransfer.Request;
 import com.mimimiii.dbutils.rest_stateTransfer.Response;
 import com.mimimiii.dbutils.rest_stateTransfer.ServerApp;
+import com.mimimiii.dbutils.user.User;
 import com.mimimiii.dbutils.user.User2;
 
 import java.sql.SQLOutput;
@@ -20,6 +21,44 @@ public class App implements ServerApp {
     public App() {
         this.battleController = new Controller.BattleController(new BattleService());
     }
+
+
+
+
+/*
+  //  Bsp.
+            try {
+                // object to string
+                ObjectMapper objectMapper = new ObjectMapper();
+                final String string = objectMapper.writeValueAsString(user2);
+               System.out.println(string);
+                }
+            }
+           catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+
+
+ */
+
+    // ein mapp exampl methoden.
+    /*
+    public V put(K key, V value)
+public V remove(Object key)
+public Collection values()
+public V get(Object key)
+public boolean isEmpty()
+     */
+
+
+
+    // string to Object
+/*
+  String json = "{\\\"Username\\\":\\\"kienboec\\\", \\\"Password\\\":\\\"daniel\\\"}\"";
+     final User2 Username = objectMapper.readValue(json, User2.class); //TypToken
+     System.out.println(Username);
+
+ */
 
 
 

@@ -36,4 +36,12 @@ public interface User {
 
 
     boolean buyPackage();
+
+    double getName();
+
+    void battleLoost();
+
+    void battleWon();
+
+    void battleDraw();
 }

@@ -1,9 +1,19 @@
 package com.mimimiii.dbutils.cards;
 
 public class TradeManager {
-    public static Object getInstance() {
 
+    public static TradeManager single_instance = null;
 
-        return null;
+        public static TradeManager getInstance()
+        {
+            if (single_instance == null) {
+                single_instance = new TradeManager();
+            }
+            return single_instance;
+        }
+
     }
-}
+
+
+
+

@@ -1,8 +1,12 @@
 package com.mimimiii.dbutils.user;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User2 {
 
-
+    //testzwecke
+public List<UserImpl> users = new ArrayList<>();
 
     public String Password;
 

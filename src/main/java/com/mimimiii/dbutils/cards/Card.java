@@ -1,5 +1,7 @@
 package com.mimimiii.dbutils.cards;
 
+import lombok.Getter;
+
 //damage | element type
 public class Card {
 
@@ -7,70 +9,78 @@ public class Card {
 
     private String id;
 
+    private float damage;
+
+    private CardType cardType;
+
+
+    private ElementTypes elementTypes;
+
+
 
     public Card() {
+
     }
 
     public Card(String cardName) {
         this.cardName = cardName;
     }
 
-    public Card(String string, String name, float aFloat, CardType cardType, ElementTypes elementTypes) {
-
-    }
-
-    public String getCardType(String cardName) {
-return this.cardName;
-    }
-
-    ;
-
-    public void removeCard(String cardName) {
-
-        // this.cardName = cardName;
-
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-
-
-    /*
-    @Getter
-    private String id;
-
-    @Getter
-    private String name;
-
-    @Getter
-    private float damage;
-
-    @Getter
-    private CardType cardType;        // enum // BUG -----nimmt er ned als min dtyp List<CardType> cardType;
-
-    @Getter
-    private ElementTypes elementTypes;
-
-    public Card() {
-
-    }
-
-
-    public Card(String id, String name, float damage) {
+    public Card(String id, String cardName, float damage,CardType type, ElementTypes element) {
         this.id = id;
-        this.name = name;
-        this.damage = damage;
-    }
-
-    public Card(String id, String name, float damage,CardType type, ElementTypes element) {
-        this.id = id;
-        this.name = name;
+        this.cardName = cardName;
         this.damage = damage;
         cardType = type;
         elementTypes = element;
     }
 
-     */
+
+    public CardType getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(CardType cardType) {
+        this.cardType = cardType;
+    }
+
+    public ElementTypes getElementType() {
+        return elementTypes;
+    }
+
+    public void setElementType(ElementTypes elementType) {
+        this.elementTypes = elementType;
+    }
+
+
+
+
+
+    public String getCardName() {
+        return cardName;
+    }
+
+    public void setCardName(String cardName) {
+        this.cardName = cardName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public float getDamage() {
+        return damage;
+    }
+
+    public void setDamage(float damage) {
+        this.damage = damage;
+    }
+
+
+    public double getName() {
+        return 0;
+    }
 }

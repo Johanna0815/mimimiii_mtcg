@@ -47,4 +47,24 @@ public class UserImpl implements User {
     public boolean buyPackage() {
         return false;
     }
+
+    @Override
+    public double getName() {
+        return 0;
+    }
+
+    @Override
+    public void battleLoost() {
+
+    }
+
+    @Override
+    public void battleWon() {
+
+    }
+
+    @Override
+    public void battleDraw() {
+
+    }
 }

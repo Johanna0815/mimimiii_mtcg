@@ -46,8 +46,9 @@ public class RequestBuilder {
         return request;
     }
 
+
     private static Crud_Method getCrud_Method(String[] splitFirstLine) {
-        return Crud_Method.valueOf(splitFirstLine[0].toUpperCase(Locale.ROOT));  // findet raus wele get / post ... http methode ist.
+        return Crud_Method.valueOf(splitFirstLine[0].toUpperCase(Locale.ROOT));  // finds out which http_method, get,post....
     }
 
     private static String getPathname(String[] splitFirstLine, Boolean hasParams) {

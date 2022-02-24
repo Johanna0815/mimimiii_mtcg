@@ -26,11 +26,11 @@ public class Controller {
             this.battleService = battleService;
         }
 
-        // GET /weather
+        // GET /battle
         public Response getBattle() {
             try {
                 List battleData = this.battleService.getBattle();
-                // "[ { \"id\": 1, \"battle\": \"Ork\", \"temperature\": 9.0 }, { ... }, { ... } ]"
+                // "[ { \"id\": 1, \"battle\": \"Ork\", \"deck\":  }, { ... }, { ... } ]"
                 String battleDataJSON = this.getObjectMapper().writeValueAsString(battleData);
 
                 return new Response(

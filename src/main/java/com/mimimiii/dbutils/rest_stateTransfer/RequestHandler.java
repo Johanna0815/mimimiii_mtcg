@@ -19,7 +19,7 @@ public class RequestHandler implements Runnable {
 
     public RequestHandler(Socket clientSocket, ServerApp app) throws IOException {
         this.clientSocket = clientSocket; // inputstreamreader direkt als char interpretiert.
-        this.in = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream())); // bufferedreader liest bis ende an einer zeile // zeile für zeile
+        this.in = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream())); // bufferedreader reads row to row till end of row
         this.output = new PrintWriter(this.clientSocket.getOutputStream(), true);
         this.app = app;
         // wenn socket beendet, und stream gschlossen, beendet sich der BufferedReaDER:
