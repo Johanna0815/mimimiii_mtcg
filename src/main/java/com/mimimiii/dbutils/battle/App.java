@@ -52,7 +52,9 @@ public boolean isEmpty()
 
 
 
-    // string to Object
+
+
+    // string to Object // json falsch ? __------------------
 /*
   String json = "{\\\"Username\\\":\\\"kienboec\\\", \\\"Password\\\":\\\"daniel\\\"}\"";
      final User2 Username = objectMapper.readValue(json, User2.class); //TypToken
